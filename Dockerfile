@@ -6,5 +6,5 @@ RUN go build -o /app
 FROM alpine:3.19
 WORKDIR /app
 COPY --from=build /app .
-COPY routes.csv .
+COPY *.csv .
 CMD ["./app"]
